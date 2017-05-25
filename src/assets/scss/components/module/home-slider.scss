@@ -1,0 +1,155 @@
+.home-slider {
+  display: none;
+}
+
+.home-slider.slick-initialized {
+  display: block;
+
+  .home-slider-slide {
+    height: 90vh;
+  }
+
+  .slide:focus {
+    outline: none;
+  }
+
+  .slick-slider {
+    width: 100%;
+  }
+
+  .slick-list {
+    overflow: hidden;
+  }
+
+  .slick-slide {
+    background: DeepPink;
+    float: left;
+    position: relative;
+    width: 100%;
+  }
+
+  .slide-content {
+    background: transparentize($sky, 0.1);
+    margin: 1em auto 0 auto;
+    width: 90%;
+    padding: 2em;
+    position: relative;
+    text-align: center;
+    top: 45%;
+    transform: translateY(-50%);
+
+    > h1 {
+      font-family: "Roboto-Black";
+      font-size: 2em;
+      line-height: 1em;
+    }
+
+    p {
+      font-size: 1.25em;
+      line-height: 1.25em;
+    }
+  }
+
+  .slide-cat {
+    display: none;
+  }
+
+  .slick-dots {
+    bottom: 110px;
+    display: block;
+    list-style: none;
+    margin: 0;
+    position: absolute;
+    text-align: center;
+    width: 100%;
+
+    li {
+      display: inline-block;
+      margin: 0 5px;
+
+      button {
+        background: transparent;
+        border: 3px solid $sky;
+        border-radius: 50%;
+        color: transparent;
+        cursor: pointer;
+        display: block;
+        font-size: 0;
+        height: 40px;
+        line-height: 0;
+        outline: none;
+        transition: transform 0.25s;
+        width: 40px;
+
+        &:hover {
+          transform: translateY(-3px);
+        }
+      }
+
+      &.slick-active {
+        button {
+          transform: translateY(-3px);
+          background: $sky;
+        }
+      }
+    }
+  }
+}
+
+
+@media print, screen and (min-width: get-media-queries(large)) {
+  .home-slider.slick-initialized {
+    .home-slider-slide {
+      height: 800px;
+      max-height: 85vh;
+    }
+
+    .slide-content {
+      float: right;
+      margin: 2em 2em 0 0;
+      max-width: 45%;
+      position: static;
+      text-align: left;
+      top: auto;
+      transform: none;
+      width: 800px;
+    }
+
+    .slide-cat {
+      background: transparentize($candy, 0.1);
+      border-radius: 0 0 20px 20px;
+      display: block;
+      left: 2em;
+      position: absolute;
+
+      p {
+        font-family: "Roboto-Black";
+        font-size: 2em;
+        line-height: 1em;
+        margin: 0;
+        padding: 0.5em;
+      }
+
+
+    }
+
+    .slick-dots {
+      bottom: 60px;
+      display: block;
+      list-style: none;
+      margin: 0;
+      position: absolute;
+      text-align: center;
+      width: 100%;
+
+      li {
+        button {
+          border: 2px solid $sky;
+          height: 20px;
+          width: 20px;
+
+        }
+      }
+    }
+  }
+}

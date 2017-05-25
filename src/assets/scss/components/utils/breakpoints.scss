@@ -1,0 +1,12 @@
+@function get-list-label($list, $label, $index) {
+  @each $val in $list {
+    $currentLabel: #{nth($val, 1)};
+    @if $currentLabel == $label {
+      @return #{nth($val, $index)};
+    }
+  }
+}
+
+@function get-media-queries($breakpoint) {
+  @return get-list-label($breakpoints, $breakpoint, 2);
+}

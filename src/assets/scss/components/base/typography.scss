@@ -1,0 +1,32 @@
+@font-face{
+	font-family: 'Roboto-Light';
+	src: url('../fonts/roboto_light/Roboto-Light-webfont.eot');
+	src: url('../fonts/roboto_light/Roboto-Light-webfont.eot?iefix') format('eot'),
+	     url('../fonts/roboto_light/Roboto-Light-webfont.woff') format('woff'),
+	     url('../fonts/roboto_light/Roboto-Light-webfont.ttf') format('truetype'),
+	     url('../fonts/roboto_light/Roboto-Light-webfont.svg#Roboto-Light-webfont') format('svg');
+}
+
+@font-face{
+	font-family: 'Roboto-Black';
+	src: url('../fonts/roboto_black/Roboto-Black-webfont.eot');
+	src: url('../fonts/roboto_black/Roboto-Black-webfont.eot?iefix') format('eot'),
+	     url('../fonts/roboto_black/Roboto-Black-webfont.woff') format('woff'),
+	     url('../fonts/roboto_black/Roboto-Black-webfont.ttf') format('truetype'),
+	     url('../fonts/roboto_black/Roboto-Black-webfont.svg#Roboto-Black-webfont') format('svg');
+}
+
+$roboto_light: 'Roboto-Light';
+$roboto_black: 'Roboto-Black';
+
+.text-bold {
+	font-weight: bold;
+}
+
+.text-uppercase {
+  text-transform: uppercase;
+}
+
+.text-white {
+	color: white;
+}

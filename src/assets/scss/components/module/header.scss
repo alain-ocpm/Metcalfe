@@ -1,0 +1,43 @@
+header, .header-spacer{
+  display: none !important;
+  background-color: #EBEBEB;
+  height: 65px;
+
+  .nav-main-menu, .nav-main-tools {
+    list-style: none;
+  }
+}
+
+@media print, screen and (min-width: get-media-queries(large)) {
+  header {
+    display: block !important;
+    position: fixed;
+    width: 100%;
+    z-index: 1000;
+
+    .nav-main-logo {
+      margin: 10px 0 0 10px;
+      width: 230px;
+    }
+
+    .nav-main-menu, .nav-main-tools {
+      display: inline;
+      margin-left: 0;
+
+      li {
+        display: inline;
+      }
+    }
+
+    .nav-main-tools {
+      li {
+        margin-left: -3px;
+      }
+    }
+  }
+
+  .header-spacer {
+    display: block !important;
+    height: 65px;
+  }
+}
