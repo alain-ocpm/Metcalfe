@@ -8,6 +8,13 @@ var init = function() {
       pauseOnFocus: false,
       prevArrow: "",
       nextArrow: "",
+      responsive: [
+      {
+        breakpoint: 640,
+        settings: {
+          dots: false
+        }
+      }],
       speed: 1000
     });
 
