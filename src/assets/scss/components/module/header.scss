@@ -1,5 +1,4 @@
 header, .header-spacer{
-  display: none !important;
   background-color: #EBEBEB;
   height: 65px;
 
@@ -13,7 +12,7 @@ header, .header-spacer{
     display: block !important;
     position: fixed;
     width: 100%;
-    z-index: 1000;
+    z-index: 5;
 
     .nav-main-logo {
       margin: 10px 0 0 10px;
