@@ -64,15 +64,21 @@ header {
 
     .nav-main-tools {
       > li {
-        background: $medium-gray;
         display: inline-block;
-        height: 56px;
         margin-left: -3px;
-        transition: background 0.5s;
-        width: 56px;
 
-        &:hover {
-          background: $sky;
+        > a {
+          background: $medium-gray;
+          display: block;
+          height: 56px;
+          transition: background 0.5s;
+          width: 56px;
+
+          &:hover {
+            background: $sky;
+          }
+
+          //&:nth-child
         }
       }
     }
