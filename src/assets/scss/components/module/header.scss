@@ -13,6 +13,17 @@ header {
     list-style: none;
   }
 
+  .nav-main-menu {
+    a {
+      color: $dark-gray;
+      transition: color 0.5s;
+
+      &:hover {
+        color: $sky;
+      }
+    }
+  }
+
   .nav-main-logo {
     margin: 8px 0 0 8px;
     width: 180px;
@@ -68,17 +79,50 @@ header {
         margin-left: -3px;
 
         > a {
-          background: $medium-gray;
+          background: $medium-gray no-repeat center;
           display: block;
           height: 56px;
           transition: background 0.5s;
           width: 56px;
 
           &:hover {
-            background: $sky;
+            background: $sky no-repeat center;
           }
+        }
 
-          //&:nth-child
+        &:nth-child(1) {
+          > a {
+            background-image: url("../img/tools-au.png");
+            background-size: 35px 35px;
+          }
+        }
+
+        &:nth-child(2) {
+          > a {
+            background-image: url("../img/tools-calendar.png");
+            background-size: 35px 35px;
+          }
+        }
+
+        &:nth-child(3) {
+          > a {
+            background-image: url("../img/tools-mail.png");
+            background-size: 30px 30px;
+          }
+        }
+
+        &:nth-child(4) {
+          > a {
+            background-image: url("../img/tools-en.png");
+            background-size: 30px 30px;
+          }
+        }
+
+        &:nth-child(5) {
+          > a {
+            background-image: url("../img/tools-search.png");
+            background-size: 20px 20px;
+          }
         }
       }
     }
