@@ -23,10 +23,30 @@ $roboto_black: 'Roboto-Black';
 	font-weight: bold;
 }
 
+.text-black {
+	font-family: $roboto_black;
+}
+
 .text-uppercase {
   text-transform: uppercase;
 }
 
 .text-white {
 	color: white;
+}
+
+[type='text'], [type='password'], [type='date'], [type='datetime'], [type='datetime-local'], [type='month'], [type='week'], [type='email'], [type='number'], [type='search'], [type='tel'], [type='time'], [type='url'], [type='color'], textarea {
+	background: $medium-gray;
+	border: 1px solid white;
+	color: white;
+	font-family: inherit;
+	font-size: 1rem;
+	height: 2rem;
+	margin-bottom: 10px;
+	padding: 0 5px;
+	width: 100%;
+
+	&:focus{
+		outline: 2px solid $sky;
+	}
 }

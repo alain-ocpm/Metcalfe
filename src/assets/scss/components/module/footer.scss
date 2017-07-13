@@ -1,0 +1,13 @@
+footer {
+  background: $dark-gray;
+}
+
+@media print, screen and (min-width: get-media-queries(large)) {
+  footer {
+    padding: 25px 0;
+
+    .row {
+      margin-bottom: 25px;
+    }
+  }
+}
