@@ -8,123 +8,195 @@ header {
   position: fixed;
   width: 100%;
   z-index: 5;
+}
 
-  .nav-main-menu, .nav-main-tools {
-    list-style: none;
-  }
+.nav-main-menu, .nav-main-tools {
+  display: inline;
+  list-style: none;
+  margin: 0;
+}
 
-  .nav-main-menu {
-    a {
-      color: $dark-gray;
-      transition: color 0.5s;
+.nav-main-menu {
+  padding: 16px 15px 0 0;
 
-      &:hover {
-        color: $sky;
-      }
+  a {
+    color: $dark-gray;
+    transition: color 0.5s;
+
+    &:hover {
+      color: $sky;
     }
   }
 
-  .nav-main-logo {
-    margin: 8px 0 0 8px;
-    width: 180px;
+  > li {
+    display: inline;
+    letter-spacing: -0.005em;
+    margin-left: 8px;
   }
+}
 
-  .menu-hamburger-wrap {
-    padding-top: 19px;
-    > div {
-      .icon-bar {
-        background: $medium-gray;
-        display: block;
-        height: 3px;
-        width: 25px;
+.nav-main-tools {
+  font-size: 0;
+  line-height: 0;
+  vertical-align: top;
 
-        &:nth-child(2) {
-          margin: 6px 0;
-        }
-      }
+  > li {
+    display: inline;
+
+    > a {
+      background: $medium-gray no-repeat center;
+      display: inline-block;
+      height: 56px;
+      margin-right: 1px;
+      transition: background 0.5s;
+      width: 56px;
 
       &:hover {
-        .icon-bar {
-          &:nth-child(1) {
-            transform: translateY(-1px);
-          }
-          &:nth-child(3) {
-            transform: translateY(1px);
-          }
+        background-color: $sky;
+      }
+    }
+
+    &:nth-child(1) {
+      > a {
+        background-image: url("../img/tools-au.png");
+        background-size: 35px 35px;
+      }
+    }
+
+    &:nth-child(2) {
+      > a {
+        background-image: url("../img/tools-calendar.png");
+        background-size: 35px 35px;
+      }
+    }
+
+    &:nth-child(3) {
+      > a {
+        background-image: url("../img/tools-mail.png");
+        background-size: 30px 30px;
+      }
+    }
+
+    &:nth-child(4) {
+      > a {
+        background-image: url("../img/tools-en.png");
+        background-size: 30px 30px;
+      }
+    }
+  }
+}
+
+.nav-main-search {
+  display: inline;
+  font-size: 0;
+  line-height: 0;
+  vertical-align: top;
+
+  > .custom-search-box {
+    background-color: $sky;
+    border: none;
+    box-shadow: none;
+    color: white;
+    display: inline-block;
+    height: 56px;
+    padding-left: 15px;
+    position: absolute;
+    right: 56px;
+    width: 228px;
+
+    &:focus {
+      border: none;
+      background-color: $sky;
+      box-shadow: none;
+      outline: none;
+    }
+  }
+
+  > #nav-main-search-submit, #nav-main-search-submit1 {
+    background: #464646 url("../img/tools-search.png") no-repeat center;
+    background-size: 20px 20px;
+    border: none;
+    cursor: pointer;
+    display: inline-block;
+    height: 56px;
+    transition: background 0.5s;
+    vertical-align: top;
+    width: 56px;
+
+    &:hover {
+      background-color: $sky;
+    }
+
+    &:focus {
+      outline: none;
+    }
+  }
+}
+
+.nav-main-logo {
+  margin: 8px 0 0 8px;
+  width: 180px;
+}
+
+.menu-hamburger-wrap {
+  margin: 19px 8px 0 0;
+
+  > div {
+    .icon-bar {
+      background: $medium-gray;
+      display: block;
+      height: 3px;
+      width: 25px;
+
+      &:nth-child(2) {
+        margin: 6px 0;
+      }
+    }
+
+    &:hover {
+      .icon-bar {
+        &:nth-child(1) {
+          transform: translateY(-1px);
+        }
+        &:nth-child(3) {
+          transform: translateY(1px);
         }
       }
     }
   }
 }
 
-@media print, screen and (min-width: get-media-queries(large)) {
-  header {
-    .nav-main-menu, .nav-main-tools {
-      display: inline;
+#offCanvasMenu {
+  .nav-main-menu {
+    display: block;
+    padding: 0;
+    margin-bottom: 16px;
+    text-align: center;
+
+    > li {
+      display: block;
       margin: 0;
-    }
+      padding: 10px 0;
 
-    .nav-main-menu {
-      padding: 16px 15px 0 0;
-      > li {
-        display: inline;
-        letter-spacing: -0.005em;
-        margin-left: 8px;
+      &:nth-child(odd) {
+        background-color: $light-gray;
       }
     }
+  }
 
-    .nav-main-tools {
-      > li {
-        display: inline-block;
-        margin-left: -3px;
+  .nav-main-tools {
+    display: block;
+    text-align: center;
 
-        > a {
-          background: $medium-gray no-repeat center;
-          display: block;
-          height: 56px;
-          transition: background 0.5s;
-          width: 56px;
+    > li > a {
+      margin: 0 2px;
+    }
+  }
 
-          &:hover {
-            background: $sky no-repeat center;
-          }
-        }
-
-        &:nth-child(1) {
-          > a {
-            background-image: url("../img/tools-au.png");
-            background-size: 35px 35px;
-          }
-        }
-
-        &:nth-child(2) {
-          > a {
-            background-image: url("../img/tools-calendar.png");
-            background-size: 35px 35px;
-          }
-        }
-
-        &:nth-child(3) {
-          > a {
-            background-image: url("../img/tools-mail.png");
-            background-size: 30px 30px;
-          }
-        }
-
-        &:nth-child(4) {
-          > a {
-            background-image: url("../img/tools-en.png");
-            background-size: 30px 30px;
-          }
-        }
-
-        &:nth-child(5) {
-          > a {
-            background-image: url("../img/tools-search.png");
-            background-size: 20px 20px;
-          }
-        }
-      }
+  .nav-main-search {
+    > .custom-search-box {
+      position: static;
+      width: 194px;
     }
   }
 }

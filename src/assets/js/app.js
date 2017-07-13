@@ -1,7 +1,5 @@
 (function($) {
   //IEF
-  
-
   $(function($){
     //DOMready
     $(document).foundation();
