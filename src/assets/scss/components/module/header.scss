@@ -36,8 +36,6 @@ header {
 }
 
 .nav-main-tools {
-  text-indent: -10000px;
-  text-indent: -100vw;
   vertical-align: top;
 
   > li {
@@ -49,6 +47,8 @@ header {
       display: inline-block;
       height: 56px;
       margin-right: 1px;
+      text-indent: -10000px;
+      text-indent: -100vw;
       transition: background 0.5s;
       width: 56px;
 
@@ -198,6 +198,16 @@ header {
     > .custom-search-box {
       position: static;
       width: 194px;
+    }
+  }
+}
+
+@media print, screen and (min-width: get-media-queries(large)) {
+  footer {
+    padding: 25px 0;
+
+    .row {
+      margin-bottom: 25px;
     }
   }
 }

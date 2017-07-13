@@ -36,7 +36,7 @@ $roboto_black: 'Roboto-Black';
 }
 
 [type='text'], [type='password'], [type='date'], [type='datetime'], [type='datetime-local'], [type='month'], [type='week'], [type='email'], [type='number'], [type='search'], [type='tel'], [type='time'], [type='url'], [type='color'], textarea {
-	background: $medium-gray;
+	background: white;
 	border: 1px solid white;
 	color: white;
 	font-family: inherit;
