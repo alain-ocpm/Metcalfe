@@ -35,10 +35,25 @@ $roboto_black: 'Roboto-Black';
 	color: white;
 }
 
+.text-underscore {
+	position: relative;
+	margin-bottom: 25px;
+
+	&::after {
+		bottom: -10px;
+    border-bottom: 5px solid #0BB5E5;
+    content: '';
+    left: 50%;
+    position: absolute;
+    transform: translateX(-50%);
+    width: 15%;
+	}
+}
+
 [type='text'], [type='password'], [type='date'], [type='datetime'], [type='datetime-local'], [type='month'], [type='week'], [type='email'], [type='number'], [type='search'], [type='tel'], [type='time'], [type='url'], [type='color'], textarea {
 	background: white;
 	border: 1px solid white;
-	color: white;
+	//color: white;
 	font-family: inherit;
 	font-size: 1rem;
 	height: 2rem;
@@ -48,5 +63,11 @@ $roboto_black: 'Roboto-Black';
 
 	&:focus{
 		outline: 2px solid $sky;
+	}
+}
+
+@media print, screen and (min-width: get-media-queries(medium)) {
+	.medium-text-left {
+		text-align: left;
 	}
 }

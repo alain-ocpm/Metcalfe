@@ -1,5 +1,6 @@
 footer {
   background: $dark-gray;
+  padding: 15px 0;
 }
 
 @media print, screen and (min-width: get-media-queries(medium)) {
@@ -8,6 +9,10 @@ footer {
 
     .row {
       margin-bottom: 25px;
+    }
+
+    textarea {
+      height: 100px !important;
     }
   }
 }
