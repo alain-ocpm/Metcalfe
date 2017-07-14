@@ -202,6 +202,21 @@ header {
   }
 }
 
+.main-header {
+  height: 200px;
+  height: 50vh;
+  overflow: hidden;
+  position: relative;
+
+  > h1 {
+    background: transparentize($sky, 0.1);
+    padding: 25px;
+    position: absolute;
+    right: 10px; bottom: 10px;
+  }
+}
+
+
 @media print, screen and (min-width: get-media-queries(large)) {
   footer {
     padding: 25px 0;
